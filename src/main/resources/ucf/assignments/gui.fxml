@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TabPane>
+         <tabs>
+            <Tab text="List1">
+               <content>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL">
+                     <items>
+                        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="919.0">
+                           <children>
+                              <Button layoutX="14.0" layoutY="3.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="69.0" text="New Item" />
+                              <DatePicker layoutX="196.0" layoutY="3.0" prefHeight="26.0" prefWidth="169.0" />
+                              <TextField layoutX="398.0" layoutY="3.0" prefHeight="26.0" prefWidth="170.0" promptText="Enter Item Name Here..." />
+                              <TextField layoutX="598.0" layoutY="6.0" prefHeight="26.0" prefWidth="298.0" promptText="Enter Item Description Here..." />
+                              <Separator layoutX="154.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="33.0" prefWidth="6.0" />
+                              <Separator layoutX="372.0" layoutY="-8.0" orientation="VERTICAL" prefHeight="41.0" prefWidth="6.0" />
+                              <Separator layoutX="584.0" orientation="VERTICAL" prefHeight="33.0" prefWidth="6.0" />
+                              <Button layoutX="90.0" layoutY="3.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="98.0" text="Mark Complete" />
+                           </children>
+                        </AnchorPane>
+                        <ListView prefHeight="200.0" prefWidth="200.0" />
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="New List" />
+                  <MenuItem mnemonicParsing="false" text="Load LIst" />
+                  <MenuItem mnemonicParsing="false" text="Load Several LIsts" />
+                  <MenuItem mnemonicParsing="false" text="Save List" />
+                  <MenuItem mnemonicParsing="false" text="Save All Lists" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Edit List Name" />
+                  <MenuItem mnemonicParsing="false" text="Edit Item Name" />
+                  <MenuItem mnemonicParsing="false" text="Edit Item Description" />
+                  <MenuItem mnemonicParsing="false" text="Edit Item Date" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Sort">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Sort By Date" />
+                  <MenuItem mnemonicParsing="false" text="Sort By Completed" />
+                  <MenuItem mnemonicParsing="false" text="Sort By Incomplete" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

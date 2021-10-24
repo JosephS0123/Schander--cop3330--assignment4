@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+rectangle Gui{
+interface listOfTodoLists{
+newListButton
+loadListButton
+loadMultipleListsButton
+saveAllListsButton
+}
+interface todoList{
+saveAllListsButton
+editTitleButton
+addItemButton
+editItemButton
+deleteItemButton
+displayOptionsButton
+markCompleteButton
+deleteListButton
+}
+
+}
+rectangle Application{
+Class Main
+Class Controller
+Class listOptions{
+newListMethod
+removeListMethod
+editListTitleMethod
+}
+Class itemOptions{
+addItemMethod
+removeItemMethod
+editItemDescMethod
+editItemDateMethod
+markItemMethod
+displayAllItemsMethod
+displayCompletedMethod
+displayIncompleteMethod
+}
+Class fileOptions{
+saveSingleListMethod
+saveAllListsMethod
+loadSingleListMethod
+loadManyListsMethod
+}
+}
+listOfTodoLists -> todoList:List selected
+
+Main -> Gui :Start App
+@enduml
